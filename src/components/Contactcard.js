@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { deleteUserAPI } from "../apiCallHelper";
-import Modal from "./Modal";
+import EditContact from "./EditContact";
 import "../index.css"
 
 const Contactcard = ({ user, deleteUser, updateUser }) => {
@@ -57,7 +57,7 @@ const Contactcard = ({ user, deleteUser, updateUser }) => {
         <button className = "edit-btn" onClick={() => setOpenmodal(true)}>Edit</button>
       </div>
       {openmodal && (
-        <Modal
+        <EditContact
           close={() => setOpenmodal(false)}
           user={user}
           updateUser={(data) => handleUpdateUser(data)}

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { updateUserAPI } from "../apiCallHelper";
 import "../index.css";
 
-const Modal = ({ user, close, updateUser }) => {
+const EditContact = ({ user, close, updateUser }) => {
   const [values, setValues] = useState({
     name: user.name,
     email: user.email,
@@ -68,4 +68,4 @@ const Modal = ({ user, close, updateUser }) => {
   );
 };
 
-export default Modal;
+export default EditContact;
